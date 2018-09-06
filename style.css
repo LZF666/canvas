@@ -1,0 +1,104 @@
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+  color: #999;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  touch-action: none;
+}
+
+#container {
+  background: #fff;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+}
+
+.actions {
+  position: fixed;
+  top: 0;
+  left: 25%;
+  padding: 5px;
+  margin: 5px;
+}
+.actions>svg {
+display: inline-block;
+margin: 0 10px;
+cursor: pointer;
+}
+.actions>svg.active{
+  fill: #000;
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
+ol{
+  list-style: none;
+  margin: 0; 
+  padding: 0; 
+}
+/* 画笔颜色 */
+.colors {
+  position: fixed;
+  top: 50px;
+  left: 10px;
+  
+}
+.colors>li {
+  width: 20px;
+  height: 20px;
+  margin: 10px 0;
+  border-radius:  50%;
+  border: 1px solid #666;
+  cursor: pointer;
+ 
+}
+.colors>li.active {
+  box-shadow: 1px 1px 7px 1px #333;
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
+.colors>li.lightblue{
+  background: lightblue;
+}
+.colors>li.pink{
+  background: pink;
+}
+.colors>li.lightgreen {
+  background: lightgreen;
+}
+/* 画笔粗细 */
+.sizes{
+  position: fixed;
+  top: 50px;
+  right: 10px;
+}
+.sizes > li{
+  width: 20px;
+  height: 0px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+.sizes>li.active {
+  box-shadow: 1px 1px 10px 1px #333;
+}
+.sizes>li.size1 {
+  border-top: 2px solid #666;
+}
+.sizes>li.size2 {
+  border-top: 5px solid #666;
+}
+#clear, #download {
+ 
+  fill: #000;
+  cursor: pointer;
+}
