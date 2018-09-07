@@ -139,42 +139,51 @@ function drwaLine(x1, y1, x2, y2) {
   context.closePath()
 }
 /******画笔颜色 */
+black.onclick = function () {
+  context.strokeStyle = 'black'
+  black.classList.add('active')
+  lightblue.classList.remove('active')
+  pink.classList.remove('active')
+  lightgreen.classList.remove('active')
+}
 lightblue.onclick = function () {
   context.strokeStyle = 'lightblue'
   lightblue.classList.add('active')
   pink.classList.remove('active')
   lightgreen.classList.remove('active')
-
+  black.classList.remove('active')
 }
 pink.onclick = function () {
   context.strokeStyle = 'pink'
   pink.classList.add('active')
   lightblue.classList.remove('active')
   lightgreen.classList.remove('active')
+  black.classList.remove('active')
 }
 lightgreen.onclick = function () {
   context.strokeStyle = 'lightgreen'
   lightgreen.classList.add('active')
   pink.classList.remove('active')
   lightblue.classList.remove('active')
+  black.classList.remove('active')
 }
 /* 画笔粗细 */
-size1.onclick = function() {
+size1.onclick = function () {
   lineWidth = 2
   size1.classList.add('active')
   size2.classList.remove('active')
 }
-size2.onclick = function() {
+size2.onclick = function () {
   lineWidth = 5
   size2.classList.add('active')
   size1.classList.remove('active')
 }
 /**清屏 */
-clear.onclick = function(){
-  context.clearRect(0,0,canvas.width,canvas.height)
+clear.onclick = function () {
+  context.clearRect(0, 0, canvas.width, canvas.height)
 }
 /**保存 */
-download.onclick = function() {
+download.onclick = function () {
   var url = canvas.toDataURL('image/png');
   var a = document.createElement('a')
   document.body.appendChild(a)
@@ -183,4 +192,3 @@ download.onclick = function() {
   a.target = '_blank'
   a.click()
 }
-

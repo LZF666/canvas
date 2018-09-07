@@ -67,6 +67,9 @@ ol{
   transform: scale(1.2);
   transition: all 0.3s;
 }
+.colors>li.black {
+  background: #000;
+}
 .colors>li.lightblue{
   background: lightblue;
 }
