@@ -13,3 +13,9 @@
 - 全屏，箭头始终位于中间
 
 - 关键函数：arrow.rotation = Math.atan2(dy, dx)
+
+### canvas 项目——文字粒子效果
+
+- 输入内容，内容以粒子效果出现
+
+- index.js 放置相关变量，particle.js 绘制粒子，shape.js 记录文字形状也就是位置
