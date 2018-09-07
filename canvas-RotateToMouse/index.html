@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id='canvas' style="background:#ccc;">
+    you browser not support canvas
+  </canvas>
+  <script src='./js/utils.js'></script>
+  <script src='./js/arrow.js'></script>
+  <script>
+    window.onload = function () {
+      utils.fullScreen(canvas)
+      var canvas = document.getElementById('canvas');
+      var context = canvas.getContext('2d');
+      var mouse = utils.captureMouse(canvas);
+      var arrow = new Arrow();
+
+      (function drawFrame() {
+        window.requestAnimationFrame(drawFrame, canvas);
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        var centerX = canvas.width / 2;
+        var centerY = canvas.height / 2;
+        arrow.x = centerX;
+        arrow.y = centerY;
+        var dx = mouse.x - arrow.x,
+          dy = mouse.y - arrow.y;
+        arrow.rotation = Math.atan2(dy, dx);
+        arrow.draw(context)
+      })()
+      
+    }
+  </script>
+
+</body>
+
+</html>
